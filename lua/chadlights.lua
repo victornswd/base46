@@ -1,6 +1,6 @@
 -- returns a huge table of all highlight groups & their colors
 
-local merge_tb = require("base16").merge_tb
+local merge_tb = require("base46").merge_tb
 
 local highlights = {}
 local hl_dir = vim.fn.stdpath "data" .. "/site/pack/packer/opt/base46/lua/integrations"
@@ -15,6 +15,9 @@ for _, file in ipairs(hl_files) do
    local integration = require("integrations." .. a)
    highlights = merge_tb(highlights, integration)
 end
+
+-- term colors
+require "term_hl"
 
 -- override user highlights if there are any
 local user_highlights = require("core.utils").load_config().ui.hl_override
