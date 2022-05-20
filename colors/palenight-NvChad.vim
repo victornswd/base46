@@ -1,5 +1,5 @@
 let g:colors_name = 'palenight-NvChad'
 lua << EOF
-  local base16 = require('base16')
-  base16(base16.themes('palenight'), true)
+  vim.g.theme = 'palenight-NvChad'
+  require('base46').load_theme()
 EOF

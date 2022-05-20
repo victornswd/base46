@@ -1,5 +1,5 @@
 let g:colors_name = 'jellybeans-NvChad'
 lua << EOF
-  local base16 = require('base16')
-  base16(base16.themes('jellybeans'), true)
+  vim.g.theme = 'jellybeans-NvChad'
+  require('base46').load_theme()
 EOF

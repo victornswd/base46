@@ -1,5 +1,5 @@
 let g:colors_name = 'monekai-NvChad'
 lua << EOF
-  local base16 = require('base16')
-  base16(base16.themes('monekai'), true)
+  vim.g.theme = 'monekai-NvChad'
+  require('base46').load_theme()
 EOF
