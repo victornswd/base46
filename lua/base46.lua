@@ -17,7 +17,12 @@ M.get_theme_tb = function(name, type)
 end
 
 M.get_colors = function(type)
-   local name = vim.g.nvchad_theme
+   local i, j = string.find(vim.g.theme, "-NvChad")
+   local name = ""
+   if i then
+      name = string.sub(vim.g.theme, 1, (i - 1))
+   end
+
    return M.get_theme_tb(name, type)
 end
 
@@ -27,7 +32,7 @@ end
 
 M.load_theme = function()
    -- set bg option
-   local theme_type = M.get_theme_tb(vim.g.nvchad_theme, "type") -- dark/light
+   local theme_type = M.get_colors "type" -- dark/light
    vim.opt.bg = theme_type
 
    -- clear highlights of bufferline (cuz of dynamic devicons hl group on the buffer)
@@ -51,7 +56,7 @@ M.load_theme = function()
 end
 
 M.override_theme = function(default_theme, theme_name)
-   local changed_themes = nvchad.load_config().ui.changed_themes
+   local changed_themes = vim.g.ui.changed_themes
 
    if changed_themes[theme_name] then
       return M.merge_tb(default_theme, changed_themes[theme_name])
@@ -61,7 +66,7 @@ M.override_theme = function(default_theme, theme_name)
 end
 
 M.toggle_theme = function()
-   local themes = nvchad.load_config().ui.theme_toggle
+   local themes = vim.g.ui.theme_toggle
 
    local theme1 = themes[1]
    local theme2 = themes[2]

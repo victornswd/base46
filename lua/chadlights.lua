@@ -1,9 +1,9 @@
-local ui = nvchad.load_config().ui
+local ui = vim.g.ui
 
 local merge_tb = require("base46").merge_tb
 
 local highlights = {}
-local hl_dir = vim.fn.stdpath "data" .. "/site/pack/packer/opt/base46/lua/integrations"
+local hl_dir = vim.fn.stdpath "data" .. "/site/pack/packer/start/base46/lua/integrations"
 
 -- push hl_dir file names to table
 local hl_files = require("plenary.scandir").scan_dir(hl_dir, {})
