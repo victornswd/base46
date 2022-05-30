@@ -1,5 +1,7 @@
 local M = {}
 
+local config = vim.g
+
 M.get_theme_tb = function(name, type)
    local default_path = "hl_themes." .. name
    local user_path = "custom.themes." .. name
@@ -56,7 +58,7 @@ M.load_theme = function()
 end
 
 M.override_theme = function(default_theme, theme_name)
-   local changed_themes = vim.g.ui.changed_themes
+   local changed_themes = config.ui.changed_themes
 
    if changed_themes[theme_name] then
       return M.merge_tb(default_theme, changed_themes[theme_name])
@@ -66,7 +68,7 @@ M.override_theme = function(default_theme, theme_name)
 end
 
 M.toggle_theme = function()
-   local themes = vim.g.ui.theme_toggle
+   local themes = config.ui.theme_toggle
 
    local theme1 = themes[1]
    local theme2 = themes[2]
