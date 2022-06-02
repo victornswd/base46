@@ -165,4 +165,12 @@ return {
    TSCurrentScope = {
       bold = true,
    },
+
+   luaTSField = {
+      fg = theme.base0D,
+   },
+
+   TSFieldKey = {
+      fg = theme.base08,
+   },
 }
