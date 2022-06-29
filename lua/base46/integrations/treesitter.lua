@@ -1,4 +1,4 @@
-local theme = require("base46").get_colors "base_16"
+local theme = require("base46").get_theme_tb "base_16"
 
 return {
    TSAnnotation = {
@@ -38,6 +38,16 @@ return {
 
    TSFloat = {
       fg = theme.base09,
+      sp = "none",
+   },
+
+   TSKeywordFunction = {
+      fg = theme.base0E,
+      sp = "none",
+   },
+
+   TSKeywordReturn = {
+      fg = theme.base0E,
       sp = "none",
    },
 
@@ -150,6 +160,10 @@ return {
    TSVariableBuiltin = {
       fg = theme.base09,
       sp = "none",
+   },
+
+   TSVariable = {
+      fg = theme.base05,
    },
 
    TSDefinition = {

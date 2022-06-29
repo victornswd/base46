@@ -52,13 +52,10 @@ M.base_16 = {
    base06 = "#e0e0e0",
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M.polish_hl = {
-   PmenuSel = {
-      fg = M.base_30.black,
-      bg = M.base_30.red,
-   },
+   PmenuSel = { fg = M.base_30.black, bg = M.base_30.red },
 }
 
 M = require("base46").override_theme(M, "tomorrow_night")

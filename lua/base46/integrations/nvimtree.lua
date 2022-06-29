@@ -1,4 +1,4 @@
-local colors = require("base46").get_colors "base_30"
+local colors = require("base46").get_theme_tb "base_30"
 
 return {
    NvimTreeEmptyFolderName = { fg = colors.folder_bg },
@@ -24,5 +24,23 @@ return {
 
    NvimTreeCursorLine = {
       bg = colors.black2,
+   },
+
+   NvimTreeGitNew = {
+      fg = colors.yellow,
+   },
+
+   NvimTreeGitDeleted = {
+      fg = colors.red,
+   },
+
+   NvimTreeSpecialFile = {
+      fg = colors.yellow,
+      bold = true,
+   },
+
+   NvimTreeRootFolder = {
+      fg = colors.red,
+      bold = true,
    },
 }

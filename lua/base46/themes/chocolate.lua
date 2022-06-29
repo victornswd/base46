@@ -57,44 +57,18 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-   TSField = {
-      fg = M.base_30.purple,
-   },
-
-   TSVariable = {
-      fg = M.base_16.base06,
-   },
-
-   TSModule = {
-      fg = M.base_30.beige,
-   },
-
-   Operator = {
-      fg = M.base_30.blue,
-   },
-
-   TSAttribute = {
-      fg = M.base_30.cyan,
-   },
-
-   TSPunctBracket = {
-      fg = M.base_16.base06,
-   },
-
-   TSParenthesis = {
-      link = "TSPunctBracket",
-   },
-
-   TSParameter = {
-      fg = M.base_30.green,
-   },
-
-   TSFuncBuiltin = {
-      fg = M.base_30.yellow,
-   },
+   TSField = { fg = M.base_30.purple },
+   TSVariable = { fg = M.base_16.base06 },
+   TSModule = { fg = M.base_30.beige },
+   Operator = { fg = M.base_30.blue },
+   TSAttribute = { fg = M.base_30.cyan },
+   TSPunctBracket = { fg = M.base_16.base06 },
+   TSParenthesis = { link = "TSPunctBracket" },
+   TSParameter = { fg = M.base_30.green },
+   TSFuncBuiltin = { fg = M.base_30.yellow },
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "chocolate")
 

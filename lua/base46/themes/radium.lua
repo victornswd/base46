@@ -53,16 +53,11 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-   TSPunctBracket = {
-      fg = M.base_16.base07,
-   },
-
-   TSParenthesis = {
-     link = "TSPunctBracket"
-   },
+   TSPunctBracket = { fg = M.base_16.base07 },
+   TSParenthesis = { link = "TSPunctBracket" },
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "radium")
 

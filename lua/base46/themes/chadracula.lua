@@ -53,17 +53,11 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-
-   TSFuncBuiltin = {
-      fg = M.base_30.cyan,
-   },
-
-   TSNumber = {
-      fg = M.base_30.purple,
-   },
+   TSFuncBuiltin = { fg = M.base_30.cyan },
+   TSNumber = { fg = M.base_30.purple },
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "chadracula")
 

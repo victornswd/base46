@@ -1,4 +1,4 @@
-local theme = require("base46").get_colors "base_16"
+local theme = require("base46").get_theme_tb "base_16"
 
 -- Standard syntax highlighting
 
@@ -30,6 +30,10 @@ return {
 
    Float = {
       fg = theme.base09,
+   },
+
+   Variable = {
+      fg = theme.base05,
    },
 
    Function = {

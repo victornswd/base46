@@ -7,7 +7,7 @@ M.base_30 = {
    black2 = "#252931",
    one_bg = "#282c34", -- real bg of onedark
    one_bg2 = "#353b45",
-   one_bg3 = "#30343c",
+   one_bg3 = "#373b43",
    grey = "#42464e",
    grey_fg = "#565c64",
    grey_fg2 = "#6f737b",
@@ -52,7 +52,7 @@ M.base_16 = {
    base0F = "#be5046",
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "onedark")
 

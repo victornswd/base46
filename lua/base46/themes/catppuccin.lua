@@ -54,20 +54,12 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-   TSVariable = {
-      fg = M.base_30.lavender,
-   },
-
-   TSProperty = {
-      fg = M.base_30.teal,
-   },
-
-   TSVariableBuiltin = {
-      fg = M.base_30.red,
-   },
+   TSVariable = { fg = M.base_30.lavender },
+   TSProperty = { fg = M.base_30.teal },
+   TSVariableBuiltin = { fg = M.base_30.red },
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "catppuccin")
 

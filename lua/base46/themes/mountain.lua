@@ -53,13 +53,10 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-   TSVariable = {
-      fg = M.base_16.base05,
-   },
-
+   TSVariable = { fg = M.base_16.base05 },
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "mountain")
 

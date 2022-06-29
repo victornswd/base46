@@ -53,12 +53,10 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  TSFieldKey = {
-    fg  = M.base_30.blue
-  }
+   TSFieldKey = { fg = M.base_30.blue },
 }
 
-M.type = "dark"
+vim.opt.bg = "dark"
 
 M = require("base46").override_theme(M, "doomchad")
 

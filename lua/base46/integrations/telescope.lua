@@ -1,4 +1,4 @@
-local colors = require("base46").get_colors "base_30"
+local colors = require("base46").get_theme_tb "base_30"
 
 return {
 
@@ -40,4 +40,16 @@ return {
    },
 
    TelescopeSelection = { bg = colors.black2, fg = colors.white },
+
+   TelescopeResultsDiffAdd = {
+      fg = colors.green,
+   },
+
+   TelescopeResultsDiffChange = {
+      fg = colors.yellow,
+   },
+
+   TelescopeResultsDiffDelete = {
+      fg = colors.red,
+   },
 }
