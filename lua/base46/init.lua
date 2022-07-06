@@ -3,8 +3,8 @@ local g = vim.g
 local config = vim.g
 
 M.get_theme_tb = function(type)
-   local default_path = "base46.themes." .. g.nvchad_theme
-   local user_path = "custom.themes." .. g.nvchad_theme
+   local default_path = "base46.themes." .. M.strip_name()
+   local user_path = "custom.themes." .. M.strip_name()
 
    local present1, default_theme = pcall(require, default_path)
    local present2, user_theme = pcall(require, user_path)
@@ -18,14 +18,14 @@ M.get_theme_tb = function(type)
    end
 end
 
-M.get_colors = function(type)
+M.strip_name = function()
    local i, j = string.find(vim.g.theme, "-NvChad")
    local name = ""
    if i then
       name = string.sub(vim.g.theme, 1, (i - 1))
    end
 
-   return M.get_theme_tb(name, type)
+   return name
 end
 
 M.merge_tb = function(table1, table2)
@@ -47,8 +47,6 @@ M.clear_highlights = function(hl_group)
 end
 
 M.load_all_highlights = function()
-   -- local theme_type = M.get_colors "type" -- dark/light
-   -- vim.opt.bg = theme_type
    vim.opt.bg = require("base46").get_theme_tb "type" -- dark/light
 
    -- reload highlights for theme switcher
