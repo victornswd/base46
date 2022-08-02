@@ -1,5 +1,5 @@
 let g:colors_name = 'onenord_light-NvChad'
 lua << EOF
   vim.g.theme = 'onenord_light-NvChad'
-  require('base46').load_theme()
+  require('base46').load_all_highlights()
 EOF
