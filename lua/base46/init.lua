@@ -19,7 +19,7 @@ M.get_theme_tb = function(type)
 end
 
 M.strip_name = function()
-  local i, j = string.find(vim.g.theme, "-NvChad")
+  local i, _ = string.find(vim.g.theme, "-NvChad")
   local name = ""
   if i then
     name = string.sub(vim.g.theme, 1, (i - 1))
